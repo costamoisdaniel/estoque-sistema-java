@@ -1,3 +1,4 @@
+package model;
 
 public class Transacao {
 	int idTransacao = 0;
