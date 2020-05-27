@@ -77,11 +77,11 @@ public class Estoque {
 	}
 
 	public void cadastrarProduto(String nomeProduto, int qtdProduto) {
-		Produto produtoBuscado = buscarProduto(nomeProduto);
+		Produto produtoBuscado = buscarProduto(nomeProduto);	
+		
 		if (produtoBuscado == null) {
 			Produto novoProduto = new Produto();
 			idProduto++;
-			novoProduto.setNomeProduto(nomeProduto);
 			novoProduto.setQtdProduto(qtdProduto);
 			novoProduto.setIdProduto(idProduto);
 			setProduto(novoProduto);
@@ -92,8 +92,7 @@ public class Estoque {
 			System.out.println("");
 			System.out.println("Ops! o produto " + nomeProduto + " já encontra-se disponível.");
 		}
-		
-	}
+	} 
 
 	public void alterarProduto (String antigoProduto, String novoProduto) {
 		Produto produtoAltera = buscarProduto(antigoProduto);
@@ -214,4 +213,3 @@ public class Estoque {
 	}
 		
 }
-
